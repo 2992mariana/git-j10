@@ -32,6 +32,40 @@
                 <li><strong>rm -rf .git</strong> elimina el repositorio de manera forzada</li>
             </ul>
         </article>
+        <article>
+            <h3>Staging Area (INDEX)</h3>
+            <p>
+                El area de control de cambios es aquella donde agregamos los archivos a los que vamos a estar haciendole seguimiento, cada vez que agregamos un elemento al INDEX, se realiza una captura de pantalla del codigo (SNAPSHOT) que luego debera ser confirmada para determinar su permanencia en el historial de cambios.
+            </p>
+            <ul class="commands">
+                <li>
+                    <strong>git status </strong> muestra el estado de los archivos del Working Directory con respecto al INDEX, dentro de los estados mas comunes estan:
+                    <ul>
+                        <li><strong>untracked: </strong> no se esta realizando el seguimiento del archivo, irrecuperable en caso de perdida.</li>
+                        <li><strong>staged: </strong> se realizo la captura del codigo, pero todavia no se confirmaron los cambios.</li>
+                        <li><strong>commited: </strong> los cambios realizados en el archivo se encuentran almacenados en el historial</li>
+                        <li><strong>modified: </strong> el archivo difiere con respecto a lo registrado en el INDEX o la ultima confirmacion.</li>
+                    </ul>
+                </li>
+                <li><strong>git add &lt;file></strong> agrega al INDEX el conjunto de archivos seleccionados.</li>
+                <li><strong>git diff</strong> compara los archivos del Working Directory con lo que se registra en el INDEX.</li>
+                <li><strong>git restore --staged &lt;file></strong> elimina la ultima captura del INDEX, no modifica el archivo.</li>
+                <li><strong>git rm --cached &lt;file></strong> elimina el archivo del INDEX, no se realiza mas seguimiento.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Repository (LOCAL/REMOTE)</h3>
+            <p>
+                Es el area donde se almacenan todas las confirmaciones de cambios en archivos de tipo BLOB(Binary Large Object File) distribuidos en una estructura de carpetas identificadas de manera hexadecimal, que van desde el 00 al ff. Esto nos permite crear puntos de control a los que podemos volver en cualquier momento.
+            </p>
+            <ul class="commands">
+                <li><strong>git commit </strong> abre el editor predeterminado para realizar la confirmacion de cambios.</li>
+                <li><strong>git log </strong> muestra el historial de cambios ordenados de manera descendente</li>
+                <li><strong>git blame &lt;file></strong> muestra los autores y confirmaciones de cada linea en un archivo.</li>
+                <li><strong>git push &lt;remote> &lt;branch></strong> agrega los cambios de la rama al repositorio remoto</li>
+                <li><strong>git fetch &lt;remote> </strong> captura el historial de cambios del repositorio remoto/li>
+            </ul>
+        </article>
     </section>
 </body>
 </html>
