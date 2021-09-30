@@ -14,6 +14,9 @@
         }
     /*Barra de Navegacion*/
         nav{
+            position: sticky;
+            top: 0;
+            z-index: 2;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -52,6 +55,18 @@
         }
         .menu a:hover{
             background-color: #3338;
+        }
+    /* Cabecera Principal */
+        #header{
+            display: grid;
+            align-content: center;
+            height: 100vh;
+            max-height: 640px;
+            color:#eee;
+            background: linear-gradient(#444, #222);
+            text-align: center;
+            text-shadow: 0 0 2vw #eee;
+            font-size: min(calc(2vw + .8rem), 3rem);
         }
 /*Medium Devices - Tablets */
     @media screen and (min-width:768px){
