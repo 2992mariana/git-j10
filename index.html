@@ -92,6 +92,15 @@
             <p>
                 Apuntador dinamico que siempre se corresponde con el ultimo commit de la historia, se utiliza para facilitar la navegacion dentro del historial de confirmaciones y tambien para probar caracteristicas, corregir errores o realizar revisiones sin necesidad de afectar la historia principal.
             </p>
+            <ul class="commands">
+                <li><strong>git branch</strong> muestra las ramas creadas en el repositorio</li>
+                <li><strong>git branch &lt;name></strong> crea una rama a partir del commit actual</li>
+                <li><strong>git branch -mv &lt;name></strong> cambia el nombre de la rama actual</li>
+                <li><strong>git branch -d &lt;branch></strong> elimina la rama si los cambios fueron integrados</li>
+                <li><strong>git branch -D &lt;branch></strong> elimina la rama aunque no se hayan integrado los cambios</li>
+                <li><strong>git push -u &lt;remote> &lt;branch></strong> agrega una nueva rama cuando no hay historial en el repositorio remoto</li>
+                <li><strong>git push -d &lt;remote> &lt;branch></strong> elimina la rama seleccionada del repositorio remoto</li>
+            </ul>
         </article>
         <article>
             <h3>STASH</h3>
