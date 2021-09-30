@@ -123,18 +123,13 @@
             <p>
                 Apuntador estatico que hace referencia al commit donde se haya aplicado, se utiliza para el versionado de nuestro proyecto y tambien facilita la navegacion dentro del historial, debido a que asociamos un nombre a una referencia. Por lo general el formato de las etiquetas suele ser <em>v.n.n.n</em> indicando version principal, subversion y revisiones o correcciones.
             </p>
-        </article>
-        <article>
-            <h3>STASH</h3>
-            <p>
-                Apuntador de la zona temporal de cambios, se utiliza cuando necesitamos realizar cualquier accion que requiera que git haga cambios en nuestro proyecto. Lo que hace es generar una referencia temporal que integra los cambios almacenados en el INDEX y cuando lo reaplicamos realiza una operacion merge a la inversa.
-            </p>
-        </article>
-        <article>
-            <h3>TAG</h3>
-            <p>
-                Apuntador estatico que hace referencia al commit donde se haya aplicado, se utiliza para el versionado de nuestro proyecto y tambien facilita la navegacion dentro del historial, debido a que asociamos un nombre a una referencia. Por lo general el formato de las etiquetas suele ser <em>v.n.n.n</em> indicando version principal, subversion y revisiones o correcciones.
-            </p>
+            <ul class="commands">
+                <li><strong>git tag -l</strong> muestra las etiquetas asignadas</li>
+                <li><strong>git tag &lt;name></strong> crea una etiqueta en el commit actual</li>
+                <li><strong>git tag &lt;new> &lt;old></strong> asigna una nueva etiqueta sobre la seleccionada</li>
+                <li><strong>git tag -d &lt;tag></strong> elimina la etiqueta selecionada</li>
+                <li><strong>git push &lt;remote> --tags</strong> carga en el repositorio las etiquetas locales</li>
+            </ul>
         </article>
     </section>
     </section>
