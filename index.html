@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-    name="viewport"
-    content="
-    width=device-width,
-    initial-scale=1,
-    maximum-scale=3"
-    />
+    <meta name="viewport"
+        content="
+            width=device-width,
+            initial-scale=1,
+            maximum-scale=3">
     <title>Git Desarrollo Colaborativo</title>
     <!-- Styles CSS -->
     <link rel="stylesheet" href="styles/main.css" />
@@ -34,14 +32,17 @@
         <article>
             <h3>Working Directory</h3>
             <p>
-                El area de trabajo corresponde a la carpeta donde inicilializamos el repositorio de git, rara vez vamos a estar utilizando la linea de comandos y es basicamente donde vamos a crear, editar y eliminar los diferentes archivos de nuestro proyecto.
+                El area de trabajo corresponde a la carpeta donde inicilializamos el
+                repositorio de git, rara vez vamos a estar utilizando la linea de
+                comandos y es basicamente donde vamos a crear, editar y eliminar los
+                diferentes archivos de nuestro proyecto.
             </p>
             <ul class="commands">
-                <li><strong>dir || ls</strong> muestra el contenido de la carpeta actual</li>
-                <li><strong>mkdir &lt;name></strong> crea una carpeta con el nombre especificado</li>
-                <li><strong>cd &lt;path></strong> cambia la carpeta actual por la seleccionada</li> 
-                <li><strong>git init</strong> inicializa un repositorio de git en la carpeta actual</li>
-                <li><strong>rm -rf .git</strong> elimina el repositorio de manera forzada</li>
+                <li><strong>dir || ls</strong> muestra el contenido de la carpeta actual.</li>
+                <li><strong>mkdir &lt;name></strong> crea una carpeta con el nombre especificado.</li>
+                <li><strong>cd &lt;path></strong> cambia la carpeta actual por la seleccionada.</li>
+                <li><strong>git init</strong> inicializa un repositorio de git en la carpeta actual.</li>
+                <li><strong>rm -rf .git</strong> elimina el repositorio de manera forzada.</li>
             </ul>
         </article>
         <article>
@@ -53,9 +54,11 @@
                 <li>
                     <strong>git status </strong> muestra el estado de los archivos del Working Directory con respecto al INDEX, dentro de los estados mas comunes estan:
                     <ul>
-                        <li><strong>untracked: </strong> no se esta realizando el seguimiento del archivo, irrecuperable en caso de perdida.</li>
-                        <li><strong>staged: </strong> se realizo la captura del codigo, pero todavia no se confirmaron los cambios.</li>
-                        <li><strong>commited: </strong> los cambios realizados en el archivo se encuentran almacenados en el historial</li>
+                        <li><strong>untracked: </strong> no se esta realizando el
+                        seguimiento del archivo, irrecuperable en caso de perdida. </li>
+                        <li><strong>staged: </strong> se realizo la captura del codigo, pero todavia no se confirmaron los cambios.
+                        </li>
+                        <li><strong>commited: </strong> los cambios realizados en el archivo se encuentran almacenados en el historial.</li>
                         <li><strong>modified: </strong> el archivo difiere con respecto a lo registrado en el INDEX o la ultima confirmacion.</li>
                     </ul>
                 </li>
@@ -71,11 +74,11 @@
                 Es el area donde se almacenan todas las confirmaciones de cambios en archivos de tipo BLOB(Binary Large Object File) distribuidos en una estructura de carpetas identificadas de manera hexadecimal, que van desde el 00 al ff. Esto nos permite crear puntos de control a los que podemos volver en cualquier momento.
             </p>
             <ul class="commands">
-                <li><strong>git commit </strong> abre el editor predeterminado para realizar la confirmacion de cambios.</li>
-                <li><strong>git log </strong> muestra el historial de cambios ordenados de manera descendente</li>
-                <li><strong>git blame &lt;file></strong> muestra los autores y confirmaciones de cada linea en un archivo.</li>
-                <li><strong>git push &lt;remote> &lt;branch></strong> agrega los cambios de la rama al repositorio remoto</li>
-                <li><strong>git fetch &lt;remote> </strong> captura el historial de cambios del repositorio remoto </li>
+                <li><strong>git commit </strong> abre el editor predeterminado para realizar la confirmacion de cambios. </li>
+                <li><strong>git log </strong> muestra el historial de cambi ordenados de manera descendente.</li>
+                <li><strong>git blame &lt;file></strong> muestra los autores y confirmaciones de cada linea en un archivo. </li>
+                <li><strong>git push &lt;remote> &lt;branch></strong> agrega l cambios de la rama al repositorio remoto.</li>
+                <li><strong>git fetch &lt;remote> </strong> captura el historial de cambios del repositorio remoto.</li>
             </ul>
         </article>
     </section>
