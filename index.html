@@ -1,127 +1,209 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" 
-        content="
-            width=device-width, 
-            initial-scale=1,
-            maximum-scale=3">
-    <title>Git Desarrollo Colaborativo</title>
-    <!-- Styles CSS -->
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+  name="viewport"
+  content="
+  width=device-width,
+  initial-scale=1,
+  maximum-scale=3"
+  />
+  <title>Git Desarrollo Colaborativo</title>
+  <!-- Styles CSS -->
+  <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
-    <nav>
-        <a href="#" class="logo">git</a>
-        <button class="btn">&equiv;</button>
-        <ul class="menu">
-            <li><a href="#" title="Inicio">inicio</a></li>
-            <li><a href="about.html" title="Acerca">acerca</a></li>
-            <li><a href="gallery.html" title="Galeria">galeria</a></li>
-            <li><a href="#contacto" title="Contacto">contacto</a></li>
-        </ul>
-    </nav>
-    <header>
-        <h1>GIT</h1>
-        <p>Desarrollo Colaborativo</p>
-    </header>
-    <section>
-        <h2>Areas de GIT</h2>
-        <article>
-            <h3>Working Directory</h3>
-            <p>
-                El area de trabajo corresponde a la carpeta donde inicilializamos el repositorio de git, rara vez vamos a estar utilizando la linea de comandos y es basicamente donde vamos a crear, editar y eliminar los diferentes archivos de nuestro proyecto.
-            </p>
-            <ul class="commands">
-                <li><strong>dir || ls</strong> muestra el contenido de la carpeta actual</li>
-                <li><strong>mkdir &lt;name></strong> crea una carpeta con el nombre especificado</li>
-                <li><strong>cd &lt;path></strong> cambia la carpeta actual por la seleccionada</li> 
-                <li><strong>git init</strong> inicializa un repositorio de git en la carpeta actual</li>
-                <li><strong>rm -rf .git</strong> elimina el repositorio de manera forzada</li>
-            </ul>
-        </article>
-        <article>
-            <h3>Staging Area (INDEX)</h3>
-            <p>
-                El area de control de cambios es aquella donde agregamos los archivos a los que vamos a estar haciendole seguimiento, cada vez que agregamos un elemento al INDEX, se realiza una captura de pantalla del codigo (SNAPSHOT) que luego debera ser confirmada para determinar su permanencia en el historial de cambios.
-            </p>
-            <ul class="commands">
-                <li>
-                    <strong>git status </strong> muestra el estado de los archivos del Working Directory con respecto al INDEX, dentro de los estados mas comunes estan:
-                    <ul>
-                        <li><strong>untracked: </strong> no se esta realizando el seguimiento del archivo, irrecuperable en caso de perdida.</li>
-                        <li><strong>staged: </strong> se realizo la captura del codigo, pero todavia no se confirmaron los cambios.</li>
-                        <li><strong>commited: </strong> los cambios realizados en el archivo se encuentran almacenados en el historial</li>
-                        <li><strong>modified: </strong> el archivo difiere con respecto a lo registrado en el INDEX o la ultima confirmacion.</li>
-                    </ul>
-                </li>
-                <li><strong>git add &lt;file></strong> agrega al INDEX el conjunto de archivos seleccionados.</li>
-                <li><strong>git diff</strong> compara los archivos del Working Directory con lo que se registra en el INDEX.</li>
-                <li><strong>git restore --staged &lt;file></strong> elimina la ultima captura del INDEX, no modifica el archivo.</li>
-                <li><strong>git rm --cached &lt;file></strong> elimina el archivo del INDEX, no se realiza mas seguimiento.</li>
-            </ul>
-        </article>
-        <article>
-            <h3>Repository (LOCAL/REMOTE)</h3>
-            <p>
-                Es el area donde se almacenan todas las confirmaciones de cambios en archivos de tipo BLOB(Binary Large Object File) distribuidos en una estructura de carpetas identificadas de manera hexadecimal, que van desde el 00 al ff. Esto nos permite crear puntos de control a los que podemos volver en cualquier momento.
-            </p>
-            <ul class="commands">
-                <li><strong>git commit </strong> abre el editor predeterminado para realizar la confirmacion de cambios.</li>
-                <li><strong>git log </strong> muestra el historial de cambios ordenados de manera descendente</li>
-                <li><strong>git blame &lt;file></strong> muestra los autores y confirmaciones de cada linea en un archivo.</li>
-                <li><strong>git push &lt;remote> &lt;branch></strong> agrega los cambios de la rama al repositorio remoto</li>
-                <li><strong>git fetch &lt;remote> </strong> captura el historial de cambios del repositorio remoto </li>
-            </ul>
-        </article>
-    </section>
-    <section>
-        <h2>Apuntadores de GIT</h2>
-        <article>
-            <h3>HEAD</h3>
-            <p>
-                Apuntador movil que indica al usuario en que punto del historial se encuentra, normalmente suele apuntar a la ultima confirmacion, pero podemos utilizarlo para desplazarnos dentro del historial. Se utiliza como referente para otros comandos como checkout o diff. si escribimos <em>HEAD~2</em> o <em>HEAD^^</em> estamos referenciando al commit que se encuentra 2 confirmaciones atras.
-            </p>
-        </article>
-        <article>
-            <h3>BRANCH</h3>
-            <p>
-                Apuntador dinamico que siempre se corresponde con el ultimo commit de la historia, se utiliza para facilitar la navegacion dentro del historial de confirmaciones y tambien para probar caracteristicas, corregir errores o realizar revisiones sin necesidad de afectar la historia principal.
-            </p>
-        </article>
-    </section>
-    <footer>
-        <table class="colabs">
-            <caption>Colaboradores</caption>
-            <thead>
-                <tr>
-                    <th>Usuario</th>
-                    <th>Nombre</th>
-                    <th>Correo</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>c215714n</td>
-                    <td>Cristian Racedo</td>
-                    <td>cristiandracedo@hotmail.com</td>
-                </tr>
-                <tr>
-                    <td>Bill Gates</td>
-                    <td>Windows</td>
-                    <td>b.gates@microsoft.com</td>
-                </tr>
-                <tr>
-                    <td>Linus Torvalds</td>
-                    <td>tux</td>
-                    <td>l.torvalds@linux.com</td>
-                </tr>
-                <!-- Ingrese sus datos -->
-            </tbody>
-        </table>
-    </footer>
+  <nav>
+    <a href="#" class="logo">git</a>
+    <button class="btn">&equiv;</button>
+    <ul class="menu">
+      <li><a href="#" title="Inicio">inicio</a></li>
+      <li><a href="about.html" title="Acerca">acerca</a></li>
+      <li><a href="gallery.html" title="Galeria">galeria</a></li>
+      <li><a href="#contacto" title="Contacto">contacto</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>GIT</h1>
+    <p>Desarrollo Colaborativo</p>
+  </header>
+  <section>
+    <h2>Areas de GIT</h2>
+    <article>
+      <h3>Working Directory</h3>
+      <p>
+        El area de trabajo corresponde a la carpeta donde inicilializamos el
+        repositorio de git, rara vez vamos a estar utilizando la linea de
+        comandos y es basicamente donde vamos a crear, editar y eliminar los
+        diferentes archivos de nuestro proyecto.
+      </p>
+      <ul class="commands">
+        <li>
+          <strong>dir || ls</strong> muestra el contenido de la carpeta actual
+        </li>
+        <li>
+          <strong>mkdir &lt;name></strong> crea una carpeta con el nombre
+          especificado
+        </li>
+        <li>
+          <strong>cd &lt;path></strong> cambia la carpeta actual por la
+          seleccionada
+        </li>
+        <li>
+          <strong>git init</strong> inicializa un repositorio de git en la
+          carpeta actual
+        </li>
+        <li>
+          <strong>rm -rf .git</strong> elimina el repositorio de manera
+          forzada
+        </li>
+      </ul>
+    </article>
+    <article>
+      <h3>Staging Area (INDEX)</h3>
+      <p>
+        El area de control de cambios es aquella donde agregamos los archivos
+        a los que vamos a estar haciendole seguimiento, cada vez que agregamos
+        un elemento al INDEX, se realiza una captura de pantalla del codigo
+        (SNAPSHOT) que luego debera ser confirmada para determinar su
+        permanencia en el historial de cambios.
+      </p>
+      <ul class="commands">
+        <li>
+          <strong>git status </strong> muestra el estado de los archivos del
+          Working Directory con respecto al INDEX, dentro de los estados mas
+          comunes estan:
+          <ul>
+            <li>
+              <strong>untracked: </strong> no se esta realizando el
+              seguimiento del archivo, irrecuperable en caso de perdida.
+            </li>
+            <li>
+              <strong>staged: </strong> se realizo la captura del codigo, pero
+              todavia no se confirmaron los cambios.
+            </li>
+            <li>
+              <strong>commited: </strong> los cambios realizados en el archivo
+              se encuentran almacenados en el historial
+            </li>
+            <li>
+              <strong>modified: </strong> el archivo difiere con respecto a lo
+              registrado en el INDEX o la ultima confirmacion.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>git add &lt;file></strong> agrega al INDEX el conjunto de
+          archivos seleccionados.
+        </li>
+        <li>
+          <strong>git diff</strong> compara los archivos del Working Directory
+          con lo que se registra en el INDEX.
+        </li>
+        <li>
+          <strong>git restore --staged &lt;file></strong> elimina la ultima
+          captura del INDEX, no modifica el archivo.
+        </li>
+        <li>
+          <strong>git rm --cached &lt;file></strong> elimina el archivo del
+          INDEX, no se realiza mas seguimiento.
+        </li>
+      </ul>
+    </article>
+    <article>
+      <h3>Repository (LOCAL/REMOTE)</h3>
+      <p>
+        Es el area donde se almacenan todas las confirmaciones de cambios en
+        archivos de tipo BLOB(Binary Large Object File) distribuidos en una
+        estructura de carpetas identificadas de manera hexadecimal, que van
+        desde el 00 al ff. Esto nos permite crear puntos de control a los que
+        podemos volver en cualquier momento.
+      </p>
+      <ul class="commands">
+        <li>
+          <strong>git commit </strong> abre el editor predeterminado para
+          realizar la confirmacion de cambios.
+        </li>
+        <li>
+          <strong>git log </strong> muestra el historial de cambios ordenados
+          de manera descendente
+        </li>
+        <li>
+          <strong>git blame &lt;file></strong> muestra los autores y
+          confirmaciones de cada linea en un archivo.
+        </li>
+        <li>
+          <strong>git push &lt;remote> &lt;branch></strong> agrega los cambios
+          de la rama al repositorio remoto
+        </li>
+        <li>
+          <strong>git fetch &lt;remote> </strong> captura el historial de
+          cambios del repositorio remoto
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section>
+    <h2>Apuntadores de GIT</h2>
+    <article>
+      <h3>HEAD</h3>
+      <p>
+        Apuntador movil que indica al usuario en que punto del historial se
+        encuentra, normalmente suele apuntar a la ultima confirmacion, pero
+        podemos utilizarlo para desplazarnos dentro del historial. Se utiliza
+        como referente para otros comandos como checkout o diff. si escribimos
+        <em>HEAD~2</em> o <em>HEAD^^</em> estamos referenciando al commit que
+        se encuentra 2 confirmaciones atras.
+      </p>
+    </article>
+    <article>
+      <h3>BRANCH</h3>
+      <p>
+        Apuntador dinamico que siempre se corresponde con el ultimo commit de
+        la historia, se utiliza para facilitar la navegacion dentro del
+        historial de confirmaciones y tambien para probar caracteristicas,
+        corregir errores o realizar revisiones sin necesidad de afectar la
+        historia principal.
+      </p>
+    </article>
+  </section>
+  <footer>
+    <table class="colabs">
+      <caption>Colaboradores</caption>
+      <thead>
+        <tr>
+          <th>Usuario</th>
+          <th>Nombre</th>
+          <th>Correo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>c215714n</td>
+          <td>Cristian Racedo</td>
+          <td>cristiandracedo@hotmail.com</td>
+        </tr>
+        <tr>
+          <td>Bill Gates</td>
+          <td>Windows</td>
+          <td>b.gates@microsoft.com</td>
+        </tr>
+        <tr>
+          <td>Linus Torvalds</td>
+          <td>tux</td>
+          <td>l.torvalds@linux.com</td>
+        </tr>
+        <tr>
+          <td>BarriosD122</td>
+          <td>Damian Barrios</td>
+          <td>barrios.d122@gmail.com</td>
+        </tr>
+        <!-- Ingrese sus datos -->
+      </tbody>
+    </table>
+  </footer>
     <!-- Scripts JS -->
     <script src="scripts/main.js"></script>
 </body>
