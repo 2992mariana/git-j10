@@ -110,6 +110,13 @@
             <p>
                 Apuntador de la zona temporal de cambios, se utiliza cuando necesitamos realizar cualquier accion que requiera que git haga cambios en nuestro proyecto. Lo que hace es generar una referencia temporal que integra los cambios almacenados en el INDEX y cuando lo reaplicamos realiza una operacion merge a la inversa.
             </p>
+            <ul class="commands">
+                <li><strong>git stash</strong> crea una referencia en la zona temporal</li>
+                <li><strong>git stash list</strong> muestra las referencias almacenadas</li>
+                <li><strong>git stash apply stash@{n}</strong> aplica los cambios almacenados en la zona temporal</li>
+                <li><strong>git stash drop stash@{n}</strong> elimina la referencia de la zona temporal </li>
+                <li><strong>git stash pop stash@{n}</strong> aplica los cambios y elimina la referencia</li>
+            </ul>
         </article>
         <article>
             <h3>TAG</h3>
