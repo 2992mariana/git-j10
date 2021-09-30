@@ -10,7 +10,7 @@
             maximum-scale=3">
     <title>Git Desarrollo Colaborativo</title>
     <!-- Styles CSS -->
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <nav>
@@ -32,7 +32,6 @@
         <article>
             <h3>Working Directory</h3>
             <p>
-<<<<<<< HEAD
                 El area de trabajo corresponde a la carpeta donde inicilializamos el
                 repositorio de git, rara vez vamos a estar utilizando la linea de
                 comandos y es basicamente donde vamos a crear, editar y eliminar los
@@ -44,26 +43,6 @@
                 <li><strong>cd &lt;path></strong> cambia la carpeta actual por la seleccionada.</li>
                 <li><strong>git init</strong> inicializa un repositorio de git en la carpeta actual.</li>
                 <li><strong>rm -rf .git</strong> elimina el repositorio de manera forzada.</li>
-=======
-            El area de trabajo corresponde a la carpeta donde inicilializamos el repositorio de git, rara vez vamos a estar utilizando la linea de comandos y es basicamente donde vamos a crear, editar y eliminar los diferentes archivos de nuestro proyecto.
-            </p>
-            <ul class="commands">
-                <li>
-                    <strong>dir || ls</strong> muestra el contenido de la carpeta actual
-                </li>
-                <li>
-                    <strong>mkdir &lt;name></strong> crea una carpeta con el nombre especificado
-                </li>
-                <li>
-                    <strong>cd &lt;path></strong> cambia la carpeta actual por la seleccionada
-                </li>
-                <li>
-                    <strong>git init</strong> inicializa un repositorio de git en la carpeta actual
-                </li>
-                <li>
-                    <strong>rm -rf .git</strong> elimina el repositorio de manera forzada
-                </li>
->>>>>>> 93ccd31 (Colaborador: Lautaro Argañaras)
             </ul>
         </article>
         <article>
@@ -138,6 +117,13 @@
                 Apuntador estatico que hace referencia al commit donde se haya aplicado, se utiliza para el versionado de nuestro proyecto y tambien facilita la navegacion dentro del historial, debido a que asociamos un nombre a una referencia. Por lo general el formato de las etiquetas suele ser <em>v.n.n.n</em> indicando version principal, subversion y revisiones o correcciones.
             </p>
         </article>
+        <article>
+            <h3>STASH</h3>
+            <p>
+                Apuntador de la zona temporal de cambios, se utiliza cuando necesitamos realizar cualquier accion que requiera que git haga cambios en nuestro proyecto. Lo que hace es generar una referencia temporal que integra los cambios almacenados en el INDEX y cuando lo reaplicamos realiza una operacion merge a la inversa.
+            </p>
+        </article>
+    </section>
     </section>
     <footer id="footer">
         <div class="map">
